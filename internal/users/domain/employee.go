@@ -14,6 +14,7 @@ type Employee struct {
 
 type EmployeesRepository interface {
 	Create(ctx context.Context, employee Employee) error
+	Get(ctx context.Context, id string) (Employee, error)
 }
 
 var (
